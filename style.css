@@ -1,70 +1,74 @@
-
-:root {
-  --bg-color-light: #f9f9f9;
-  --text-color-light: #111;
-  --bg-color-dark: #111;
-  --text-color-dark: #f9f9f9;
-  --accent-color: #5cbf4d;
-  --font: 'Segoe UI', sans-serif;
-}
+/* style.css */
 
 body {
-  font-family: var(--font);
+  font-family: Arial, sans-serif;
+  background-color: #f0fff4;
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color-light);
-  color: var(--text-color-light);
-  transition: background-color 0.3s, color 0.3s;
-  background-image: url('leaf.png');
-  background-repeat: repeat;
-  background-size: 150px;
-}
-
-body.dark {
-  background-color: var(--bg-color-dark);
-  color: var(--text-color-dark);
+  color: #2e2e2e;
 }
 
 header {
-  padding: 1em;
-  background-color: var(--accent-color);
+  background-color: #4caf50;
   color: white;
+  padding: 20px 15px;
   text-align: center;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-style: italic;
+}
+
+nav {
+  background-color: #388e3c;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #2e7d32;
+}
+
 .content {
-  padding: 2em;
-  position: relative;
-  z-index: 2;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px 30px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
-#theme-toggle {
-  position: fixed;
-  top: 1em;
-  right: 1em;
-  background: #fff;
-  color: #333;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  z-index: 5;
+.content h2 {
+  color: #2e7d32;
 }
 
-.smoke {
+.content ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
   position: fixed;
-  top: 0;
   bottom: 0;
-  width: 100px;
-  background-image: url('smoke.gif');
-  background-size: cover;
-  background-repeat: repeat-y;
-  opacity: 0.4;
-  z-index: 1;
-}
-.smoke.left {
-  left: 0;
-}
-.smoke.right {
-  right: 0;
+  width: 100%;
 }
