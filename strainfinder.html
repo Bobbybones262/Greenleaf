@@ -12,7 +12,7 @@
 <body>
   <header><h1>Strain Finder</h1></header>
   <main class="content">
-    <p>Select desired effect:</p>
+    <p>Select your desired effect:</p>
     <select id="effect-select">
       <option value="">--Choose an effect--</option>
       <option value="relaxation">Relaxation</option>
@@ -23,9 +23,9 @@
   </main>
   <script>
     const strains = {
-      relaxation: ['Granddaddy Purple', 'Northern Lights'],
-      energy: ['Green Crack', 'Sour Diesel'],
-      focus: ['Jack Herer', 'Harlequin']
+      relaxation: ['Granddaddy Purple', 'Northern Lights', 'Bubba Kush'],
+      energy: ['Green Crack', 'Durban Poison', 'Jack Herer'],
+      focus: ['Harlequin', 'Sour Tsunami', 'ACDC']
     };
     document.getElementById('effect-select').addEventListener('change', function() {
       const effect = this.value;
