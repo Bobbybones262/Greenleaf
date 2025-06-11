@@ -2,26 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Legality Map - GreenLeaf</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenLeaf - Legality</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="darkmode.js"></script>
 </head>
 <body>
-  <header><h1>State-by-State Cannabis Legality</h1></header>
-  <main class="content">
-    <p>This interactive map shows where cannabis is legal for recreational and/or medical use.</p>
-    <iframe src="https://www.lawatlas.org/datasets/statutory-schemes-for-medical-marijuana" width="100%" height="600px"></iframe>
+  <header>
+    <h1>🌿 GreenLeaf</h1>
+    <p>Your Cannabis Encyclopedia</p>
+    <button id="darkToggle">🌓 Toggle Theme</button>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="legality.html">Legality</a>
+    <a href="users.html">Users</a>
+    <a href="medical.html">Medical</a>
+    <a href="recreational.html">Recreational</a>
+    <a href="strains.html">Strains</a>
+    <a href="effects.html">Effects</a>
+    <a href="history.html">History</a>
+    <a href="science.html">Science</a>
+  </nav>
+  <main>
+    <section class="fade-in">
+      <h2>🌍 Global Cannabis Laws</h2><p>Breakdown of countries/states where cannabis is legal, medical-only, or banned.</p>
+    </section>
   </main>
-  
-<div class="smoke left"></div>
-<div class="smoke right"></div>
-<button id="theme-toggle">Toggle Theme</button>
-<script>
-  const toggleBtn = document.getElementById('theme-toggle');
-  toggleBtn.onclick = () => {
-    document.body.classList.toggle('dark');
-  };
-</script>
-
+  <footer>&copy; 2025 GreenLeaf. All rights reserved.</footer>
 </body>
 </html>

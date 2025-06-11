@@ -1,74 +1,46 @@
-/* style.css */
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0fff4;
   margin: 0;
-  padding: 0;
-  color: #2e2e2e;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #f0f0f0;
+  background-image: url('smoke.gif'), url('smoke.gif');
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+  background-position: left center, right center;
+  background-size: contain;
 }
-
-header {
-  background-color: #4caf50;
-  color: white;
-  padding: 20px 15px;
+header, footer {
+  background-color: #1f1f1f;
+  padding: 1rem;
   text-align: center;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-header p {
-  margin: 5px 0 0;
-  font-style: italic;
-}
-
 nav {
-  background-color: #388e3c;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  background-color: #2a2a2a;
+  padding: 0.5rem;
+  text-align: center;
 }
-
 nav a {
-  color: white;
-  padding: 12px 18px;
+  color: #90ee90;
+  margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s;
 }
-
-nav a:hover {
-  background-color: #2e7d32;
+main {
+  padding: 1rem 2rem;
 }
-
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 0 15px 30px;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
-}
-
-.content h2 {
-  color: #2e7d32;
-}
-
-.content ul {
-  margin-left: 20px;
-  line-height: 1.6;
-}
-
-footer {
-  background-color: #4caf50;
+button {
+  background: #333;
   color: white;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 0.9rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.fade-in {
+  animation: fadeIn 1.5s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
