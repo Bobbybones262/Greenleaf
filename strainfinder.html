@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Strain Finder - GreenLeaf</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .strain-results { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <header><h1>Strain Finder</h1></header>
+  <main class="content">
+    <p>Select desired effect:</p>
+    <select id="effect-select">
+      <option value="">--Choose an effect--</option>
+      <option value="relaxation">Relaxation</option>
+      <option value="energy">Energy</option>
+      <option value="focus">Focus</option>
+    </select>
+    <div class="strain-results" id="strain-results"></div>
+  </main>
+  <script>
+    const strains = {
+      relaxation: ['Granddaddy Purple', 'Northern Lights'],
+      energy: ['Green Crack', 'Sour Diesel'],
+      focus: ['Jack Herer', 'Harlequin']
+    };
+    document.getElementById('effect-select').addEventListener('change', function() {
+      const effect = this.value;
+      const results = document.getElementById('strain-results');
+      if (effect && strains[effect]) {
+        results.innerHTML = '<h3>Recommended Strains:</h3><ul>' +
+          strains[effect].map(s => `<li>${s}</li>`).join('') + '</ul>';
+      } else {
+        results.innerHTML = '';
+      }
+    });
+  </script>
+</body>
+</html>
